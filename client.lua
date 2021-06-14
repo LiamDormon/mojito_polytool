@@ -48,6 +48,12 @@ CreateThread(function()
                             coords = tostring(hitCoords)
                         })
                     end
+                        
+                    if IsControlJustPressed(0, 74) then
+                        SendNUIMessage({
+                            coords = string.format("{ centre = %s, radius = %s }", hitCoords, curRadius)
+                        })
+                    end
                 end
             else
                 Wait(1000)
